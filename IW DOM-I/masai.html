@@ -1,0 +1,46 @@
+<!-- Design an application such that when user clicks on Apply button, he should take entered values from both input and select tags and display it in h2 tag with id "display" -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Masai School Application</h1>
+  <p>Enter Your name and gender to apply for masai school</p>
+  <h2 id="display">Display entered name and gender here</h2>
+  <hr>
+  <input type="text" id ="name" placeholder="Enter your name">
+  <select id="gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+  <button id="applyButton">Apply</button>
+</body>
+</html>
+<script>
+
+let displayName = document.getElementById("display");
+let nameInput = document.getElementById("name");
+let gender = document.getElementById("gender");
+let select = document.getElementById("applyButton");
+
+
+select.addEventListener("click" , function(){
+    let enterName = nameInput.value;
+    let choose = gender.value;
+
+    displayName.textContent= `Name: ${enterName}, Gender: ${choose}`
+
+} )
+
+
+
+
+
+
+
+
+
+</script>
